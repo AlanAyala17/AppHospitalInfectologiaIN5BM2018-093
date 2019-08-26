@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="789.0" style="-fx-background-color: #AFEEEE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alanayala.controller.menuPrincipalController">
+   <children>
+      <ImageView fitHeight="739.0" fitWidth="789.0" layoutY="-1.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Hospital.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="518.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="29.0" prefWidth="271.0" style="-fx-background-color: #ADD8E6;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedico" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaControlCita" text="Control  Citas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReceta" text="Recetas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTelefonoMedico" text="TelefonosMedicos" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaPaciente" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaContactoUrgencia" text="Contacto Urgencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaArea" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargo" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" text="Turnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="HistorialCitas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca De">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventaProgramador" text="Programador" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Salir">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarApp" text="CerrarApp" />
+               </items>
+            </Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="605.0" prefHeight="54.0" prefWidth="423.0" text="Telefono: 2250 8974" textFill="#2999c9">
+         <font>
+            <Font name="Bodoni MT Black" size="39.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="102.0" fitWidth="313.0" layoutX="455.0" layoutY="566.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/bienvenidos.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

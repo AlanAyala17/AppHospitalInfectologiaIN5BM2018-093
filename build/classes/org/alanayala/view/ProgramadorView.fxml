@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="789.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alanayala.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="538.0" fitWidth="789.0" layoutX="2.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/bbva-open4u-javascript-programacion.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="285.0" layoutY="246.0" prefHeight="53.0" prefWidth="234.0" text="2018-093">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="52.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="236.0" fitWidth="293.0" layoutX="454.0" layoutY="449.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/descarga.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="285.0" layoutY="94.0" prefHeight="119.0" prefWidth="510.0" text="Alan José Adrian Ayala Folgar" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="555.0" layoutY="6.0" onAction="#MenuPrincipal" prefHeight="53.0" prefWidth="234.0" text="Menu Principal" textFill="#d70707">
+         <font>
+            <Font name="Broadway" size="25.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="14.0" layoutY="104.0" prefHeight="98.0" prefWidth="234.0" text="Programador: ">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="231.0" prefHeight="91.0" prefWidth="224.0" text="Carnet:">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="248.0" fitWidth="816.0" layoutY="443.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lenguajes-de-programación-1-1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="19.0" layoutY="374.0" text="Codigo tecnico:">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="289.0" layoutY="361.0" text="IN5BM">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

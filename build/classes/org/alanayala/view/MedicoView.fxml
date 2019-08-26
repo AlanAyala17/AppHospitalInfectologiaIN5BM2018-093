@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="789.0" style="-fx-background-color: #E0FFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alanayala.controller.MedicoController">
+   <children>
+      <ImageView fitHeight="592.0" fitWidth="789.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/medicos.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="7.0" layoutY="4.0" prefHeight="51.0" prefWidth="50.0" text="Codigo">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoMedico" disable="true" layoutX="64.0" layoutY="17.0" prefWidth="150.0" />
+      <Label layoutX="266.0" layoutY="21.0" text="Licencia">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtlicenciaMedica" disable="true" editable="false" layoutX="334.0" layoutY="17.0" promptText="Licencia Medica" />
+      <Label layoutX="15.0" layoutY="90.0" text="Nombres">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtnombres" disable="true" editable="false" layoutX="89.0" layoutY="86.0" promptText="nombres" />
+      <TextField fx:id="txtapellidos" disable="true" editable="false" layoutX="89.0" layoutY="141.0" promptText="apellidos" />
+      <TextField fx:id="txtsexo" disable="true" editable="false" layoutX="82.0" layoutY="189.0" promptText="Masculino/Femenino" />
+      <Label layoutX="17.0" layoutY="142.0" prefHeight="22.0" prefWidth="59.0" text="Apellidos" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="11.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="193.0" text="Sexo">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicos" layoutY="276.0" onMouseClicked="#seleccionar" prefHeight="303.0" prefWidth="789.0">
+        <columns>
+          <TableColumn fx:id="colcodigoMedico" prefWidth="118.0" text=" codigoMedico" />
+          <TableColumn fx:id="collicenciaMedica" prefWidth="121.0" text="licenciaMedica" />
+            <TableColumn fx:id="colnombres" prefWidth="114.0" text="nombres" />
+            <TableColumn fx:id="colapellidos" prefWidth="107.0" text="apellidos" />
+            <TableColumn fx:id="colhoraEntrada" prefWidth="114.0" text="horaEntrada" />
+            <TableColumn fx:id="colhoraSalida" prefWidth="108.0" text="horaSalida" />
+            <TableColumn fx:id="colsexo" prefWidth="99.0" text="sexo" />
+        </columns>
+      </TableView>
+      <GridPane fx:id="grphoraEntrada" layoutX="314.0" layoutY="60.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="104.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtphoraEntrada" disable="true" editable="false" prefHeight="25.0" prefWidth="127.0" promptText="HoraEntrada" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnAgregar" layoutX="89.0" layoutY="632.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Label alignment="CENTER" layoutX="527.0" layoutY="70.0" prefHeight="186.0" prefWidth="256.0" text="Médicos" textFill="#1831d7">
+         <font>
+            <Font name="Calisto MT" size="63.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEditar" layoutX="261.0" layoutY="632.0" mnemonicParsing="false" onAction="#edit" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="449.0" layoutY="632.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnReporte" disable="true" layoutX="628.0" layoutY="632.0" mnemonicParsing="false" text="Reporte" />
+      <GridPane fx:id="grphoraSalida" layoutX="308.0" layoutY="138.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtphoraSalida" disable="true" editable="false" promptText="HoraSalida" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="429.0" layoutY="73.0" text="Entrada">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="418.0" layoutY="145.0" text="Salida" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Hyperlink layoutX="677.0" layoutY="6.0" onAction="#MenuPrincipal" text="Menu Principal">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Hyperlink>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alanayala.controller.ControlCitasController">
+   <children>
+      <ImageView fitHeight="689.0" fitWidth="789.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/tapiz.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="73.0" text="Codigo Control Citas:" textFill="#6cb51b">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="214.0" text="Hora de Salida:" textFill="#6cb51b">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="73.0" text="Codigo Paciente:" textFill="#6cb51b">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="73.0" text="Fecha:" textFill="#6cb51b">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="214.0" text="Hora de Inicio:" textFill="#6cb51b">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="214.0" text="Codigo Medico:" textFill="#6cb51b">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbControlCitas" disable="true" layoutX="14.0" layoutY="103.0" prefHeight="39.0" prefWidth="188.0" />
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="555.0" layoutY="103.0" prefHeight="39.0" prefWidth="155.0" />
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="555.0" layoutY="244.0" prefHeight="39.0" prefWidth="155.0" />
+      <GridPane fx:id="grpFecha" layoutX="319.0" layoutY="103.0" prefHeight="39.0" prefWidth="128.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtpFecha" disable="true" />
+         </children>
+      </GridPane>
+      <TextField fx:id="txtHoraInicio" disable="true" layoutX="14.0" layoutY="244.0" prefHeight="39.0" prefWidth="163.0" />
+      <TextField fx:id="txtHoraFin" disable="true" layoutX="319.0" layoutY="244.0" prefHeight="39.0" prefWidth="163.0" />
+      <Label layoutX="185.0" layoutY="23.0" text="Control de Citas">
+         <font>
+            <Font name="Goudy Stout" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblControlCitas" layoutX="-1.0" layoutY="345.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="789.0">
+        <columns>
+          <TableColumn fx:id="colControlCitas" prefWidth="143.0" text="Codigo Control Cita" />
+          <TableColumn fx:id="colFecha" prefWidth="94.0" text="Fecha" />
+            <TableColumn fx:id="colHoraInicio" prefWidth="114.0" text="Hora de Inicio" />
+            <TableColumn fx:id="colHoraFin" prefWidth="122.0" text="Hora de Fin" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="147.0" text="Codigo Paciente" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="166.0" text="Codigo Medico" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="88.0" layoutY="585.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="39.0" prefWidth="74.0" text="Agregar" />
+      <Button fx:id="btnEditar" layoutX="289.0" layoutY="585.0" mnemonicParsing="false" onAction="#edit" prefHeight="39.0" prefWidth="74.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="474.0" layoutY="585.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="39.0" prefWidth="74.0" text="Eliminar" />
+      <Button fx:id="btnReporteGeneral" layoutX="673.0" layoutY="566.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="103.0" text="Reporte General" />
+      <Button fx:id="btnReporte" layoutX="672.0" layoutY="624.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="39.0" prefWidth="103.0" text="Reporte" />
+      <Hyperlink layoutX="652.0" layoutY="8.0" onAction="#MenuPrincipal" text="Menu Principal">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#209fc3" />
+                  <Stop color="#18b5e1" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Hyperlink>
+   </children>
+</AnchorPane>
